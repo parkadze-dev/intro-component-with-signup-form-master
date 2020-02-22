@@ -10,31 +10,52 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./img/favicon-32x32.png"
     />
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
-    <div class="page-title">
-      Learn to code by </br> watching others
+    <div class="parent-box">
+      <div class="text-box">
+        <div class="page-title">
+          Learn to code by </br> watching others
+        </div>
+        <div class="page-description">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </div>
+      </div>
+      <div class="form-box">
+        <div class="trial-info">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </div>
+        <form id="signUpForm" class="form-container" onsubmit="return validateForm();">
+          <div class="input-icon">
+            <input class="input-field" type="text" id="fName" name="fName" placeholder="First Name"/>
+            <img src="/img/icon-error.svg" alt="error-icon" id="fName-alert">
+          </div>
+          <span id="fName-alert-text"></span>
+          <div class="input-icon">
+            <input class="input-field" type="text" id="lName" name="lName" placeholder="Last Name" />
+            <img src="/img/icon-error.svg" alt="error-icon" id="lName-alert">
+          </div>
+          <span id="lName-alert-text"></span>
+          <div class="input-icon">
+            <input class="input-field" type="text" id="emailField" name="emailField" placeholder="Email Address" />
+            <img src="/img/icon-error.svg" alt="error-icon" id="email-alert">
+          </div>
+          <span id="email-alert-text"></span>
+          <div class="input-icon">
+            <input class="input-field" type="password" id="pass" name="pass" placeholder="Password" />
+            <img src="/img/icon-error.svg" alt="error-icon" id="password-alert">
+          </div>
+          <span id="password-alert-text"></span>
+          <input class="primary-cta" type="submit" value="claim your free trial"/>
+          <div class="disclaimer-text">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></div>
+        </form>
+      </div>
     </div>
-    <div class="page-description">
-      See how experienced developers solve problems in real-time. Watching
-      scripted tutorials is great, but understanding how developers think is
-      invaluable.
-    </div>
-    <div class="trial-info">
-      <span>Try it free 7 days</span> then $20/mo. thereafter
-    </div>
-    <form id="signUpForm" class="form-container">
-      <input type="text" id="fName" name="fName" placeholder="First Name"/>
-      <input type="text" id="lName" name="lName" placeholder="Last Name"/>
-      <input type="text" id="emailField" name="emailField" placeholder="Email Address" required/>
-      <input type="password" id="pass" name="pass" placeholder="Password"/>
-      <button class="primary-cta" id="confirmBtn" disabled>claim your free trial</button>
-      <div class="disclaimer-text">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></div>
-    </form>
-
     <footer>
       <p class="attribution">
         Challenge by
@@ -43,6 +64,7 @@
         >. Coded by <a href="#">Michael Parkadze</a>.
       </p>
     </footer>
+    
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
